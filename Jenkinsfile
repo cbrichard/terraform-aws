@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Plan') {
+        stage('Test') {
             steps {
                 echo 'Running Plan..'
                 terraform plan
