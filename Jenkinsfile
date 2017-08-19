@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                echo 'No Build Neccessary..'
             }
         }
         stage('Test') {
@@ -16,6 +16,11 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
+            }
+        }
+        stage('Approve Plan') {
+          steps {
+            input message: 'The Plan looks good?', ok: 'Apply Plan', submitter: 'chrichar', submitterParameter: 'approver'
             }
         }
     }
