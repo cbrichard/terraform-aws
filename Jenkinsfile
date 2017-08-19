@@ -20,7 +20,7 @@ pipeline {
         }
         stage('Approve Plan') {
           steps {
-            input message: 'The Plan looks good?', ok: 'Apply Plan', submitter: 'chrichar', submitterParameter: 'approver'
+            input message: 'The Plan looks good?', ok: 'Apply Plan', submitter: 'kiri', submitterParameter: 'approver'
             }
         }
     }
